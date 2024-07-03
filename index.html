@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scarlett OF</title>
+    <link rel="icon" href="letter-s-pink-alphabet-glossy-png.webp"> 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: #fff;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            animation: zoomIn 1.5s ease;
+        }
+        .photo-container {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #ff7eb3;
+            margin: auto;
+            animation: borderAnimate 2s infinite linear;
+        }
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: slideInDown 1s ease;
+        }
+        .subtitle {
+            font-size: 24px;
+            margin-bottom: 20px;
+            animation: slideInUp 1s ease;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            color: #fff;
+            background-color: #ff7eb3;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 123, 179, 0.7);
+        }
+        button:hover {
+            background-color: #ff5470;
+            transform: scale(1.1);
+        }
+        @keyframes zoomIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 5px rgba(255, 123, 179, 0.7);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 20px rgba(255, 123, 179, 0.7);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 5px rgba(255, 123, 179, 0.7);
+            }
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes floatDiagonal {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(20px, -20px); }
+            100% { transform: translate(0, 0); }
+        }
+        @keyframes borderAnimate {
+            0% {
+                border-color: #ff7eb3;
+            }
+            50% {
+                border-color: #ff5470;
+            }
+            100% {
+                border-color: #ff7eb3;
+            }
+        }
+        .floating-heart {
+            position: absolute;
+            animation: float 3s ease-in-out infinite, floatDiagonal 3s ease-in-out infinite;
+            font-size: 30px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="photo-container">
+            <img src="https://i.imgur.com/bFySDDy_d.webp?maxwidth=760&fidelity=grand" alt="My Photo">
+        </div>
+        <div class="title">Welcome to My OnlyFans!</div>
+        <div class="subtitle">Discover exclusive content and connect with me!</div>
+        <button onclick="window.location.href='https://onlyfans.com/scarlettxoluv';">Visit My OnlyFans</button>
+    </div>
+    
+    <!-- Floating Elements -->
+    <div class="floating-heart" style="top: 10%; left: 20%;">❤️</div>
+    <div class="floating-heart" style="top: 30%; right: 15%;">💖</div>
+    <div class="floating-heart" style="bottom: 20%; left: 25%;">💕</div>
+    <div class="floating-heart" style="bottom: 10%; right: 20%;">💓</div>
+</body>
+</html>
