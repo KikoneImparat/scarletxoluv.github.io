@@ -14,10 +14,24 @@
             height: 100vh;
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #ff758c, #ff7eb3);
             color: #fff;
             overflow: hidden;
+            position: relative;
         }
+        
+        /* Background Image */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.imgur.com/S0UMlOL.jpeg') no-repeat center center/cover;
+            filter: blur(4px);
+            z-index: -1;
+        }
+        
         .container {
             text-align: center;
             padding: 20px;
@@ -26,6 +40,7 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             animation: zoomIn 1.5s ease;
         }
+        
         .photo-container {
             position: relative;
             width: 250px;
@@ -70,77 +85,6 @@
             background-color: #ff5470;
             transform: scale(1.1);
         }
-        @keyframes zoomIn {
-            from {
-                transform: scale(0);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-        @keyframes slideInDown {
-            from {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        @keyframes slideInUp {
-            from {
-                transform: translateY(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 5px rgba(255, 123, 179, 0.7);
-            }
-            50% {
-                transform: scale(1.1);
-                box-shadow: 0 0 20px rgba(255, 123, 179, 0.7);
-            }
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 5px rgba(255, 123, 179, 0.7);
-            }
-        }
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0); }
-        }
-        @keyframes floatDiagonal {
-            0% { transform: translate(0, 0); }
-            50% { transform: translate(20px, -20px); }
-            100% { transform: translate(0, 0); }
-        }
-        @keyframes borderAnimate {
-            0% {
-                border-color: #ff7eb3;
-            }
-            50% {
-                border-color: #ff5470;
-            }
-            100% {
-                border-color: #ff7eb3;
-            }
-        }
-        .floating-heart {
-            position: absolute;
-            animation: float 3s ease-in-out infinite, floatDiagonal 3s ease-in-out infinite;
-            font-size: 30px;
-            color: rgba(255, 255, 255, 0.7);
-        }
     </style>
 </head>
 <body>
@@ -152,11 +96,5 @@
         <div class="subtitle">Discover exclusive content and connect with me!</div>
         <button onclick="window.location.href='https://onlyfans.com/emyof';">Visit My Private Page</button>
     </div>
-    
-    <!-- Floating Elements -->
-    <div class="floating-heart" style="top: 10%; left: 20%;">❤️</div>
-    <div class="floating-heart" style="top: 30%; right: 15%;">💖</div>
-    <div class="floating-heart" style="bottom: 20%; left: 25%;">💕</div>
-    <div class="floating-heart" style="bottom: 10%; right: 20%;">💓</div>
 </body>
 </html>
